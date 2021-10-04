@@ -3,43 +3,12 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-        System.out.println(temp(20,35));
-        System.out.println(temp(15,24));
-        System.out.println(temp(10,20));
-        System.out.println(temp(35,45));
-        System.out.println(temp(45,55));
+        Father father = new Father("Akjol", " 2,", " Green",
+                new Hobbi(3, "Tennis"), " Designer", "Tayota");
+        Sun sun = new Sun("Ronaldo", "1,80", "Green", new Hobbi(2, "Footboll"), 18);
+        Sun sun2 = new Sun("Messi", "1,60", "White", new Hobbi(3, "Footboll"), 17);
+        father.getInfo();
+        sun.getInfo();
+        sun2.getInfo();
     }
-    public static String temp(int age, int temperature){
-        if(age>=20 && age<45 ){
-            if(temperature >=-20 && temperature <=30){
-                return "Можно идти гулять";
-            }
-            else{
-                return "Остовайтесь дома";
-
-            }
-
-
-        }
-        if(age<20 && age>=0){
-            if(temperature>=0 && temperature<=28){
-                return "Можно идти гулять";
-            }
-            else{
-                return "Остовайтесь дома";
-            }
-        }
-        if(age>=45){
-            if(temperature<=25 && temperature>=-10){
-               return "Можно идти гулять";
-            }
-            else{
-                return "Остовайтесь дома";
-            }
-
-        }
-        return "0";
-    }
-
 }
